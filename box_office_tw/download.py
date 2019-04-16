@@ -1,6 +1,9 @@
 from pathlib import Path
 
 from requests_html import HTMLSession
+from requests import codes
+
+from .parser import *
 
 
 class DownloadManager:
@@ -20,7 +23,7 @@ class DownloadManager:
 
         self.session = HTMLSession()
 
-    def _mkdir(self, path):
+    def _mkdir(self, path: Path):
         if not path.is_dir():
             path.mkdir(parents=True, exist_ok=True)
 
@@ -29,7 +32,11 @@ class DownloadManager:
         self._fetch_from_tfi()
 
     def _fetch_from_opendata(self):
-        self.session.get(self.OPEN_DATA_URL)
+        r = self.session.get(self.OPEN_DATA_URL)
+        r.raise_for_status()
+        parse_opendata_index(r.html)
 
     def _fetch_from_tfi(self):
-        self.session.get(self.TFI_WEEKLY_URL)
+        r = self.session.get(self.TFI_WEEKLY_URL)
+        r.raise_for_status()
+        parse_tfi_index(r.html)
