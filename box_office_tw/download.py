@@ -1,3 +1,4 @@
+import json
 from pathlib import Path
 
 from requests_html import HTMLSession
@@ -9,6 +10,7 @@ from .parser import *
 class DownloadManager:
     OPEN_DATA_URL = 'https://data.gov.tw/dataset/94224'
     TFI_WEEKLY_URL = 'https://www.tfi.org.tw/BoxOfficeBulletin/weekly'
+    TFI_WEEKLY_INDEX = 'tfi_weekly_index.json'
     DOWNLOAD_DIR = 'source'
     OPENDATA_DIR = 'opendata'
     TFI_DIR = 'tfi'
@@ -19,6 +21,7 @@ class DownloadManager:
         self.opendata_dir = self.download_dir.joinpath(self.OPENDATA_DIR)
         self._mkdir(self.opendata_dir)
         self.tfi_dir = self.download_dir.joinpath(self.TFI_DIR)
+        self.tfi_weekly_index = self.tfi_dir.joinpath(self.TFI_WEEKLY_INDEX)
         self._mkdir(self.tfi_dir)
 
         self.session = HTMLSession()
@@ -39,4 +42,10 @@ class DownloadManager:
     def _fetch_from_tfi(self):
         r = self.session.get(self.TFI_WEEKLY_URL)
         r.raise_for_status()
-        parse_tfi_index(r.html)
+        parser = TfiParser(r.html)
+        index = parser.fetch_index()
+        with open(self.tfi_weekly_index, 'w', encoding='utf-8') as f:
+            f.write(
+                json.dumps(index,
+                           cls=WeeklyData.DataJSONEncoder,
+                           ensure_ascii=False))
