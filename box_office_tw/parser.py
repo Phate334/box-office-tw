@@ -1,8 +1,7 @@
 import re
-from json import JSONEncoder
 from dataclasses import dataclass
 from urllib.parse import urljoin
-from typing import Sequence
+from typing import List
 
 from requests_html import HTML
 
@@ -12,23 +11,23 @@ class WeeklyData:
     start: tuple
     end: tuple
     url: str
+    delta: str = None
 
-    def get_title(self):
+    DELTA_SAVE: str = 'save'
+    DELTA_DELETE: str = 'delete'
+
+    def get_date(self) -> str:
         return '{s[0]}{s[1]}{s[2]}-{e[0]}{e[1]}{e[2]}'.format(s=self.start,
                                                               e=self.end)
 
-    def get_save_name(self):
-        return '{}.{}'.format(self.get_title(), self.get_file_ext())
+    def get_name(self) -> str:
+        return '{}.{}'.format(self.get_date(), self.get_file_ext())
 
-    def get_file_ext(self):
+    def get_file_ext(self) -> str:
         return self.url.split('.')[-1]
 
-    class DataJSONEncoder(JSONEncoder):
-        def default(self, o):
-            return {'title': o.get_title(), 'url': o.url}
 
-
-def parse_opendata_index(html: HTML) -> Sequence[WeeklyData]:
+def parse_opendata_index(html: HTML) -> List[WeeklyData]:
     pass
 
 
@@ -40,26 +39,26 @@ class TfiParser:
     def __init__(self, html: HTML):
         self.html = html
 
-    def fetch_index(self) -> Sequence[WeeklyData]:
+    def fetch_index(self) -> List[WeeklyData]:
         table_rows = [
             tr for tr in self.html.find('tr') if 'data-id' in tr.attrs
         ]
         result = []
         for r in table_rows:
             td = r.find('td')
-            start, end = self.__fetch_date(td[1].text)
+            start, end = self._fetch_date(td[1].text)
             for a in r.find('a'):
-                url = self.__fetch_url(a)
+                url = self._fetch_url(a)
                 result.append(WeeklyData(start=start, end=end, url=url))
         return result
 
-    def __fetch_date(self, title: str) -> tuple:
+    def _fetch_date(self, title: str) -> tuple:
         year = self.year_pattern.findall(title)
         start_day, end_day = self.day_pattern.findall(title)
 
         return (year[0], start_day[0], start_day[1]), (year[-1], end_day[0],
                                                        end_day[1])
 
-    def __fetch_url(self, a: str) -> str:
+    def _fetch_url(self, a: str) -> str:
         path = self.link_pattern.findall(a.attrs['onclick'])[0]
         return urljoin(a.base_url, path)
