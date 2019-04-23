@@ -21,6 +21,7 @@ class DownloadManager:
         self.download_dir = base_dir.joinpath(self.DOWNLOAD_DIR)
         self._mkdir(self.download_dir)
         self.opendata_dir = self.download_dir.joinpath(self.OPENDATA_DIR)
+        self.opendata_index = self.opendata_dir.joinpath(self.INDEX_FILE)
         self._mkdir(self.opendata_dir)
         self.tfi_dir = self.download_dir.joinpath(self.TFI_DIR)
         self.tfi_weekly_index = self.tfi_dir.joinpath(self.INDEX_FILE)
@@ -30,7 +31,7 @@ class DownloadManager:
 
     def fetch(self):
         self._fetch_from_opendata()
-        self._fetch_from_tfi()
+        # self._fetch_from_tfi()
 
     def _mkdir(self, path: Path):
         if not path.is_dir():
@@ -39,7 +40,13 @@ class DownloadManager:
     def _fetch_from_opendata(self):
         r = self.session.get(self.OPEN_DATA_URL)
         r.raise_for_status()
-        parse_opendata_index(r.html)
+        parser = OpenDataParser(r.html)
+        remote_index = parser.fetch_index()
+        local_index = self._load_index(self.opendata_index)
+        for data in remote_index:
+            self._update_data(self.opendata_dir, local_index, data)
+
+        self._dump_index(self.opendata_index, remote_index)
 
     def _fetch_from_tfi(self):
         r = self.session.get(self.TFI_WEEKLY_URL)
@@ -82,7 +89,6 @@ class DownloadManager:
             self._download(local_path, data.url)
 
     def _download(self, local_path: Path, url: str):
-        print(local_path)
         res = self.session.get(url)
         res.raise_for_status()
         with open(local_path, 'wb') as f:
