@@ -1,12 +1,10 @@
 import json
 from pathlib import Path
-from dataclasses import dataclass
 from typing import List, Dict
 
 from requests_html import HTMLSession
-from requests import codes
 
-from .parser import *
+from .parser import WeeklyData, OpenDataParser, TfiParser
 
 
 class DownloadManager:
@@ -31,7 +29,7 @@ class DownloadManager:
 
     def fetch(self):
         self._fetch_from_opendata()
-        # self._fetch_from_tfi()
+        self._fetch_from_tfi()
 
     def _mkdir(self, path: Path):
         if not path.is_dir():

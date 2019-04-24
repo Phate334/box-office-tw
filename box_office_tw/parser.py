@@ -11,10 +11,6 @@ class WeeklyData:
     start: tuple
     end: tuple
     url: str
-    delta: str = None
-
-    DELTA_SAVE: str = 'save'
-    DELTA_DELETE: str = 'delete'
 
     def get_date(self) -> str:
         return '{s[0]}{s[1]}{s[2]}-{e[0]}{e[1]}{e[2]}'.format(s=self.start,
