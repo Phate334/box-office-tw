@@ -60,4 +60,4 @@ class Converter:
             for j in self.json_dir.glob(self.json_pattern)
         ]
         with open(self.json_index, 'w') as f:
-            f.write(json.dumps(out))
+            f.write(json.dumps(out, indent=4, sort_keys=True))

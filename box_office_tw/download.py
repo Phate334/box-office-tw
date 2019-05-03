@@ -72,7 +72,8 @@ class DownloadManager:
             out[i.get_date()] = data
 
         with open(local_path, 'w', encoding='utf-8') as f:
-            f.write(json.dumps(out, ensure_ascii=False))
+            f.write(
+                json.dumps(out, ensure_ascii=False, indent=4, sort_keys=True))
 
     def _update_data(self, dir_path: Path, index: Dict, data: WeeklyData):
         name = data.get_name()
