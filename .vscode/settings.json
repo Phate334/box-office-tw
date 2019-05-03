@@ -1,6 +1,0 @@
-{
-    "python.pythonPath": "C:\\Users\\Phate\\.virtualenvs\\box-office-tw-Qk427C-b\\Scripts\\python.exe",
-    "python.linting.pylintEnabled": true,
-    "python.linting.enabled": true,
-    "python.formatting.provider": "yapf"
-}
