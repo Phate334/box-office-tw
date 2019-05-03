@@ -40,7 +40,7 @@ class Converter:
                     data = raw.decode('utf-8')
             data = csv.DictReader([d for d in data.splitlines()],
                                   skipinitialspace=True)
-            out = [d for d in data]
+            out = [self._cleanup(d) for d in data]
             with open(json_file, 'w', encoding='utf-8') as f:
                 f.write(json.dumps(out, ensure_ascii=False))
 
@@ -61,3 +61,7 @@ class Converter:
         ]
         with open(self.json_index, 'w') as f:
             f.write(json.dumps(out, indent=4, sort_keys=True))
+
+    def _cleanup(self, row: dict):
+        row.pop(None, None)
+        return row
