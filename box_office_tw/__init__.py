@@ -1,2 +1,2 @@
 from .download import DownloadManager
-from .convert import Convertor
+from .convert import Converter

@@ -1,49 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html style="height: 100%;">
 
     <head>
+        <meta charset="utf-8" />
         <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
         <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css">
         <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-balham.css">
     </head>
 
-    <body>
-        <div id="myGrid" style="height: 600px;width:100%;" class="ag-theme-balham"></div>
-
-        <script type="text/javascript" charset="utf-8">
-            // specify the columns
-            var columnDefs = [
-                { headerName: "序號", field: "序號" },
-                { headerName: "國別地區", field: "國別地區" },
-                { headerName: "中文片名", field: "中文片名" },
-                { headerName: "上映日期", field: "上映日期" },
-                { headerName: "申請人", field: "申請人" },
-                { headerName: "出品", field: "出品" },
-                { headerName: "上映院數", field: "上映院數" },
-                { headerName: "銷售票數", field: "銷售票數" },
-                { headerName: "銷售金額", field: "銷售金額" },
-                { headerName: "累計銷售票數", field: "累計銷售票數" },
-                { headerName: "累計銷售金額", field: "累計銷售金額" }
-            ];
-
-            // let the grid know which columns to use
-            var gridOptions = {
-                columnDefs: columnDefs
-            };
-
-            // lookup the container we want the Grid to use
-            var eGridDiv = document.querySelector('#myGrid');
-
-            // create the grid passing in the div to use together with the columns & data we want to use
-            new agGrid.Grid(eGridDiv, gridOptions);
-
-            fetch('https://phate334.github.io/box-office-tw/json/20180730-20180805.json').then(function (response) {
-                return response.json();
-            }).then(function (data) {
-                gridOptions.api.setRowData(data);
-            })
-
-        </script>
+    <body style="height: 100%;">
+        <div id="myGrid" style="height: 95%;" class="ag-theme-balham"></div>
+        <script src="./index.js"></script>
     </body>
 
 </html>
