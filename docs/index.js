@@ -1,4 +1,19 @@
 (function() {
+  var request = new XMLHttpRequest();
+  var indexURL = "./json/index.json";
+  request.open("GET", indexURL);
+  request.responseType = "json";
+  request.send();
+
+  request.onload = function() {
+    var dataIndex = request.response;
+    if (dataIndex == null) {
+      console.error("index not found");
+      return;
+    }
+    console.log(dataIndex);
+  };
+
   function showTable() {
     console.log("show table.");
     // specify the columns
