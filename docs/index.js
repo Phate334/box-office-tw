@@ -42,9 +42,7 @@
     // create the grid passing in the div to use together with the columns & data we want to use
     new agGrid.Grid(eGridDiv, gridOptions);
 
-    fetch(
-      "https://phate334.github.io/box-office-tw/json/20180730-20180805.json"
-    )
+    fetch("./json/20190422-20190428.json")
       .then(function(response) {
         return response.json();
       })

@@ -1,5 +1,6 @@
 import csv
 import codecs
+import re
 import json
 from pathlib import Path
 
@@ -13,6 +14,8 @@ class Converter:
     csv_pattern = '**/*.csv'
     xlsx_pattern = '**/*.xlsx'
     pdf_pattern = '**/*.pdf'
+
+    number_pattern = re.compile(r',?[\d{1,3}]+')
 
     def __init__(self, base_dir: Path):
         self.source_dir = base_dir.joinpath(self.SOURCE_DIR)
@@ -64,4 +67,7 @@ class Converter:
 
     def _cleanup(self, row: dict):
         row.pop(None, None)
+        for k in row:
+            if self.number_pattern.fullmatch(row[k]):
+                row[k] = int(row[k].replace(',', ''))
         return row
