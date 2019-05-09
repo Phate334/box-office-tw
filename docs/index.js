@@ -32,6 +32,12 @@
   function initPage() {
     console.log("init table.");
     var gridOptions = {
+      defaultColDef: {
+        resizable: true,
+        rowSelection: "single",
+        editable: true
+      },
+      animateRows: true,
       columnDefs: columnMeta.json
     };
     var eGridDiv = document.querySelector("#myGrid");

@@ -1,13 +1,61 @@
 [
-  { "field": "序號", "sortable": true },
-  { "field": "國別地區", "sortable": true },
-  { "field": "中文片名" },
-  { "field": "上映日期", "sortable": true },
-  { "field": "申請人", "sortable": true },
-  { "field": "出品", "sortable": true },
-  { "field": "上映院數", "sortable": true },
-  { "field": "銷售票數", "sortable": true },
-  { "field": "銷售金額", "sortable": true },
-  { "field": "累計銷售票數", "sortable": true },
-  { "field": "累計銷售金額", "sortable": true }
+  {
+    "field": "序號",
+    "sortable": true,
+    "width": 100
+  },
+  {
+    "field": "國別地區",
+    "sortable": true,
+    "width": 150,
+    "filter": "agTextColumnFilter"
+  },
+  {
+    "field": "中文片名"
+  },
+  {
+    "field": "上映日期",
+    "sortable": true,
+    "width": 130
+  },
+  {
+    "field": "申請人",
+    "sortable": true,
+    "filter": "agTextColumnFilter"
+  },
+  {
+    "field": "出品",
+    "sortable": true,
+    "filter": "agTextColumnFilter"
+  },
+  {
+    "field": "上映院數",
+    "sortable": true,
+    "width": 130,
+    "filter": "agNumberColumnFilter"
+  },
+  {
+    "field": "銷售票數",
+    "sortable": true,
+    "width": 130,
+    "filter": "agNumberColumnFilter"
+  },
+  {
+    "field": "銷售金額",
+    "sortable": true,
+    "width": 130,
+    "filter": "agNumberColumnFilter"
+  },
+  {
+    "field": "累計銷售票數",
+    "sortable": true,
+    "width": 155,
+    "filter": "agNumberColumnFilter"
+  },
+  {
+    "field": "累計銷售金額",
+    "sortable": true,
+    "width": 160,
+    "filter": "agNumberColumnFilter"
+  }
 ]
