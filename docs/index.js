@@ -1,48 +1,43 @@
 (function() {
-  var request = new XMLHttpRequest();
-  var indexURL = "./json/index.json";
-  request.open("GET", indexURL);
-  request.responseType = "json";
-  request.send();
-
-  request.onload = function() {
-    var dataIndex = request.response;
-    if (dataIndex == null) {
-      console.error("index not found");
-      return;
-    }
-    console.log(dataIndex);
+  var indexMeta = {
+    url: "./json/index.json"
+  };
+  var columnMeta = {
+    url: "./column-defines.json"
   };
 
-  function showTable() {
-    console.log("show table.");
-    // specify the columns
-    var columnDefs = [
-      { headerName: "序號", field: "序號", sortable: true },
-      { headerName: "國別地區", field: "國別地區", sortable: true },
-      { headerName: "中文片名", field: "中文片名" },
-      { headerName: "上映日期", field: "上映日期", sortable: true },
-      { headerName: "申請人", field: "申請人", sortable: true },
-      { headerName: "出品", field: "出品", sortable: true },
-      { headerName: "上映院數", field: "上映院數", sortable: true },
-      { headerName: "銷售票數", field: "銷售票數", sortable: true },
-      { headerName: "銷售金額", field: "銷售金額", sortable: true },
-      { headerName: "累計銷售票數", field: "累計銷售票數", sortable: true },
-      { headerName: "累計銷售金額", field: "累計銷售金額", sortable: true }
-    ];
+  function loadMeta(meta) {
+    return new Promise(function(resolve) {
+      var request = new XMLHttpRequest();
+      request.open("GET", meta.url);
+      request.responseType = "json";
+      request.onload = function() {
+        if (request.status === 200) {
+          meta.json = request.response;
+          resolve();
+        }
+      };
+      request.send();
+    });
+  }
 
-    // let the grid know which columns to use
+  var getIndex = loadMeta(indexMeta);
+  var getColDefs = loadMeta(columnMeta);
+
+  Promise.all([getIndex, getColDefs]).then(function() {
+    indexMeta.json.sort().reverse();
+    initPage();
+  });
+
+  function initPage() {
+    console.log("init table.");
     var gridOptions = {
-      columnDefs: columnDefs
+      columnDefs: columnMeta.json
     };
-
-    // lookup the container we want the Grid to use
     var eGridDiv = document.querySelector("#myGrid");
-
-    // create the grid passing in the div to use together with the columns & data we want to use
     new agGrid.Grid(eGridDiv, gridOptions);
 
-    fetch("./json/20190422-20190428.json")
+    fetch(toDataURL(indexMeta.json[0]))
       .then(function(response) {
         return response.json();
       })
@@ -51,5 +46,7 @@
       });
   }
 
-  showTable();
+  function toDataURL(name) {
+    return "./json/" + name + ".json";
+  }
 })();
