@@ -11,12 +11,14 @@
     "filter": "agTextColumnFilter"
   },
   {
-    "field": "中文片名"
+    "field": "中文片名",
+    "filter": "agTextColumnFilter"
   },
   {
     "field": "上映日期",
     "sortable": true,
-    "width": 130
+    "width": 130,
+    "filter": "agTextColumnFilter"
   },
   {
     "field": "申請人",
