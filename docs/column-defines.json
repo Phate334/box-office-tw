@@ -2,12 +2,12 @@
   {
     "field": "序號",
     "sortable": true,
-    "width": 100
+    "width": 60
   },
   {
     "field": "國別地區",
     "sortable": true,
-    "width": 150,
+    "width": 95,
     "filter": "agTextColumnFilter"
   },
   {
@@ -17,7 +17,7 @@
   {
     "field": "上映日期",
     "sortable": true,
-    "width": 130,
+    "width": 100,
     "filter": "agTextColumnFilter"
   },
   {
@@ -33,31 +33,31 @@
   {
     "field": "上映院數",
     "sortable": true,
-    "width": 130,
+    "width": 100,
     "filter": "agNumberColumnFilter"
   },
   {
     "field": "銷售票數",
     "sortable": true,
-    "width": 130,
+    "width": 100,
     "filter": "agNumberColumnFilter"
   },
   {
     "field": "銷售金額",
     "sortable": true,
-    "width": 130,
+    "width": 100,
     "filter": "agNumberColumnFilter"
   },
   {
     "field": "累計銷售票數",
     "sortable": true,
-    "width": 155,
+    "width": 130,
     "filter": "agNumberColumnFilter"
   },
   {
     "field": "累計銷售金額",
     "sortable": true,
-    "width": 160,
+    "width": 130,
     "filter": "agNumberColumnFilter"
   }
 ]
