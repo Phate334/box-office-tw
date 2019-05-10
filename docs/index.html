@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <!-- Ag-Grid -->
-    <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
     <link
       rel="stylesheet"
       href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css"
@@ -17,19 +16,18 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
 
   <body style="height: 100%;">
     <nav>
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo"
-          >每週全國票房 <i class="material-icons">local_movies</i>
+        <a href="#" class="brand-logo center">
+          <i class="material-icons">local_movies</i>每週全國票房
         </a>
         <ul class="right hide-on-med-and-down">
           <li>
@@ -39,6 +37,9 @@
       </div>
     </nav>
     <div id="myGrid" style="height: 90%;" class="ag-theme-balham"></div>
+
+    <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>
