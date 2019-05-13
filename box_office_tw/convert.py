@@ -62,6 +62,7 @@ class Converter:
             j.parts[-1].split('.')[0]
             for j in self.json_dir.glob(self.json_pattern)
         ]
+        out.sort()
         with open(self.json_index, 'w') as f:
             f.write(json.dumps(out, indent=4, sort_keys=True))
 
