@@ -1,3 +1,7 @@
+## 每週全國票房
+
+[![Build Status](https://travis-ci.org/Phate334/box-office-tw.svg?branch=master)](https://travis-ci.org/Phate334/box-office-tw)
+
 # 進度
 
 目前[首頁](https://phate334.github.io/box-office-tw/)顯示最新一週的資料，可以排序、過濾。
