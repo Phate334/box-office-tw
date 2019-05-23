@@ -330,8 +330,11 @@
         "pdf": "https://www.tfi.org.tw/Content/TFI/PublicInfo/全國票房2019年0429-0505統計資訊.pdf",
         "xlsx": "https://www.tfi.org.tw/Content/TFI/PublicInfo/全國票房2019年0429-0505統計資訊.xlsx"
     },
-    "20190506-20190501": {
-        "pdf": "https://www.tfi.org.tw/Content/TFI/PublicInfo/全國票房2019年0506-0512統計資訊.pdf",
-        "xlsx": "https://www.tfi.org.tw/Content/TFI/PublicInfo/全國票房2019年0506-0512統計資訊.xlsx"
+    "20190506-20190512": {
+        "pdf": "https://www.tfi.org.tw/Content/TFI/PublicInfo/全國票房2019年0506-0512統計資訊.pdf"
+    },
+    "20190513-20190519": {
+        "pdf": "https://www.tfi.org.tw/Content/TFI/PublicInfo/全國票房2019年0513-0519統計資訊.pdf",
+        "xlsx": "https://www.tfi.org.tw/Content/TFI/PublicInfo/全國票房2019年0513-0519統計資訊.xlsx"
     }
 }
