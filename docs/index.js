@@ -1,16 +1,19 @@
 (function() {
   var indexMeta = {
-    url: "./json/index.json"
+    url: './json/index.json',
   };
   var columnMeta = {
-    url: "./column-defines.json"
+    url: './column-defines.json',
   };
+  var dataGridDiv = document.querySelector('#data-grid');
+  var dataId = document.querySelector('#data-id');
+  var gridOptions;
 
   function loadMeta(meta) {
     return new Promise(function(resolve) {
       var request = new XMLHttpRequest();
-      request.open("GET", meta.url);
-      request.responseType = "json";
+      request.open('GET', meta.url);
+      request.responseType = 'json';
       request.onload = function() {
         if (request.status === 200) {
           meta.json = request.response;
@@ -30,29 +33,32 @@
   });
 
   function initPage() {
-    console.log("init table.");
-    var gridOptions = {
+    console.log('init table.');
+    gridOptions = {
       defaultColDef: {
         resizable: true,
-        rowSelection: "single",
-        editable: true
+        rowSelection: 'single',
+        editable: true,
       },
       animateRows: true,
-      columnDefs: columnMeta.json
+      columnDefs: columnMeta.json,
     };
-    var eGridDiv = document.querySelector("#myGrid");
-    new agGrid.Grid(eGridDiv, gridOptions);
+    new agGrid.Grid(dataGridDiv, gridOptions);
+    updateTable(indexMeta.json[0]);
+  }
 
-    fetch(toDataURL(indexMeta.json[0]))
+  function updateTable(name) {
+    fetch(toDataURL(name))
       .then(function(response) {
         return response.json();
       })
       .then(function(data) {
         gridOptions.api.setRowData(data);
+        dataId.innerHTML = name;
       });
   }
 
   function toDataURL(name) {
-    return "./json/" + name + ".json";
+    return './json/' + name + '.json';
   }
 })();
