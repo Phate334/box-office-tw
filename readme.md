@@ -2,9 +2,9 @@
 
 [![Build Status](https://travis-ci.org/Phate334/box-office-tw.svg?branch=master)](https://travis-ci.org/Phate334/box-office-tw)
 
-這個專案目標是取回 [Opendata](https://data.gov.tw/dataset/94224) 和 [TFI](https://www.tfi.org.tw/BoxOfficeBulletin/weekly) 公布的每週票房資料，並轉為 JSON 格式。
+這個專案目標是取回 [OpenData](https://data.gov.tw/dataset/94224) 和 [TFI](https://www.tfi.org.tw/BoxOfficeBulletin/weekly) 公布的每週票房資料，並轉為 JSON 格式。
 
-目前[首頁](https://phate334.github.io/box-office-tw/)顯示最新一週的資料，可以排序、過濾。
+[首頁](https://phate334.github.io/box-office-tw/)表格顯示取回檔案中最新一週的資料，可以排序、過濾。目前的 json 檔只有轉換 [OpenData](https://data.gov.tw/dataset/94224) 公布的 `csv` 格式檔案，放在 [TFI](https://www.tfi.org.tw/BoxOfficeBulletin/weekly) 上更早的 `xlsx` 和 `pdf` 還沒轉換。
 
 # API
 
@@ -73,7 +73,7 @@
 
 ---
 
-# 資料清理
+# 資料清理紀錄
 
 紀錄轉換成 json 過程額外處理的內容
 
