@@ -1,0 +1,16 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 95%;
+  margin: 5px;
+}
+
+#data-grid {
+  height: 90%;
+}
+
+#data-id {
+  margin-bottom: 0;
+}

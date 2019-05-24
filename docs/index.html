@@ -1,45 +1,27 @@
 <!DOCTYPE html>
-<html style="height: 100%;">
+<html>
   <head>
     <meta charset="utf-8" />
     <!-- Ag-Grid -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-balham.css"
-    />
-    <!-- Materialize -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css" />
+    <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-balham.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="./index.css" />
+
+    <!-- Bulma -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
 
-  <body style="height: 95%; margin: 5px;">
-    <nav>
-      <div class="nav-wrapper">
-        <a href="#" class="brand-logo center">
-          <i class="material-icons">local_movies</i>每週全國票房
-        </a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li>
-            <a href="#"><i class="material-icons">menu</i></a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div id="myGrid" style="height: 90%;" class="ag-theme-balham"></div>
+  <body>
+    <h1 class="title"><i class="material-icons">local_movies</i>每週全國票房</h1>
+    <h2 class="subtitle" id="data-id"></h2>
+
+    <div class="ag-theme-balham" id="data-grid"></div>
 
     <script src="https://unpkg.com/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="./index.js"></script>
   </body>
 </html>

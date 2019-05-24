@@ -21,16 +21,6 @@
     "filter": "agTextColumnFilter"
   },
   {
-    "field": "申請人",
-    "sortable": true,
-    "filter": "agTextColumnFilter"
-  },
-  {
-    "field": "出品",
-    "sortable": true,
-    "filter": "agTextColumnFilter"
-  },
-  {
     "field": "上映院數",
     "sortable": true,
     "width": 100,
@@ -59,5 +49,15 @@
     "sortable": true,
     "width": 130,
     "filter": "agNumberColumnFilter"
+  },
+  {
+    "field": "出品",
+    "sortable": true,
+    "filter": "agTextColumnFilter"
+  },
+  {
+    "field": "申請人",
+    "sortable": true,
+    "filter": "agTextColumnFilter"
   }
 ]
