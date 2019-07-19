@@ -145,5 +145,8 @@
     },
     "20190701-20190707": {
         "csv": "https://opendata.culture.tw/upload/dataSource/2019-07-11/cab6e528-7526-4b3e-b81f-9d86c5e78e9e/4336549585b681868c826914c8a895d9.csv"
+    },
+    "20190708-20190714": {
+        "csv": "https://opendata.culture.tw/upload/dataSource/2019-07-18/ad3b67a8-0ecd-460e-a730-bf1b5cf85c74/83efc3e538c42838fbcc15b94da36c8a.csv"
     }
 }
