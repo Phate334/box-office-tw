@@ -392,5 +392,9 @@
     "20190819-20190825": {
         "pdf": "https://www.tfi.org.tw/Content/TFI/PublicInfo/全國電影票房2019年0819-0825統計資訊.pdf",
         "xlsx": "https://www.tfi.org.tw/Content/TFI/PublicInfo/全國電影票房2019年0819-0825統計資訊.xlsx"
+    },
+    "20190826-20190901": {
+        "pdf": "https://www.tfi.org.tw/Content/TFI/PublicInfo/全國電影票房2019年0826-0901統計資訊.pdf",
+        "xlsx": "https://www.tfi.org.tw/Content/TFI/PublicInfo/全國電影票房2019年0826-0901統計資訊.xlsx"
     }
 }
