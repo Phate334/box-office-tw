@@ -169,5 +169,8 @@
     },
     "20190826-20190901": {
         "csv": "https://opendata.culture.tw/upload/dataSource/2019-09-05/84dd90af-f56c-4685-8124-e1d8a52af982/d840615af278c456508ca8bb55830800.csv"
+    },
+    "20190902-20190908": {
+        "csv": "https://opendata.culture.tw/upload/dataSource/2019-09-12/5de8b0ee-b5d2-4444-bacb-cc53b74c90af/6780ae2b694f3cdb65175d7d15db798a.csv"
     }
 }
