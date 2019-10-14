@@ -181,5 +181,8 @@
     },
     "20190923-20190929": {
         "csv": "https://opendata.culture.tw/upload/dataSource/2019-10-03/62899310-bead-49bb-9933-b1c5f5b87f57/7a0c54ace44ebabd8b4cca526f088201.csv"
+    },
+    "20190930-20191007": {
+        "csv": "https://opendata.culture.tw/upload/dataSource/2019-10-10/ad905334-75e5-4a68-b77f-1e579bbedcde/6ed5ee0ff80f1405caacd51de7519009.csv"
     }
 }
