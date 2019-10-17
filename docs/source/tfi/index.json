@@ -413,8 +413,12 @@
         "pdf": "https://www.tfi.org.tw/Content/TFI/PublicInfo/全國電影票房2019年0923-0929統計資訊.pdf",
         "xlsx": "https://www.tfi.org.tw/Content/TFI/PublicInfo/全國電影票房2019年0923-0929統計資訊.xlsx"
     },
-    "20190930-20191007": {
-        "pdf": "https://www.tfi.org.tw/Content/TFI/PublicInfo/全國電影票房2019年0930-1007統計資訊.pdf",
-        "xlsx": "https://www.tfi.org.tw/Content/TFI/PublicInfo/全國電影票房2019年0930-1007統計資訊.xlsx"
+    "20190930-20191006": {
+        "pdf": "https://www.tfi.org.tw/Content/TFI/PublicInfo/全國電影票房2019年0930-1006統計資訊.pdf",
+        "xlsx": "https://www.tfi.org.tw/Content/TFI/PublicInfo/全國電影票房2019年0930-1006統計資訊.xlsx"
+    },
+    "20191007-20191013": {
+        "pdf": "https://www.tfi.org.tw/Content/TFI/PublicInfo/全國電影票房2019年1007-1013統計資訊.pdf",
+        "xlsx": "https://www.tfi.org.tw/Content/TFI/PublicInfo/全國電影票房2019年1007-1013統計資訊.xlsx"
     }
 }
