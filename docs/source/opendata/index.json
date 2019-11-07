@@ -193,5 +193,8 @@
     },
     "20191021-20191027": {
         "csv": "https://opendata.culture.tw/upload/dataSource/2019-10-31/9f79d08a-a03c-4fba-a032-1ed2cf9537b1/a3a833ec93d184c04bce3238903ce627.csv"
+    },
+    "20191028-20191103": {
+        "csv": "https://opendata.culture.tw/upload/dataSource/2019-11-07/85c9a55e-c46d-4b77-a90c-8be985e2c76f/997c34fb9c63b0e0177de6bcaaabdaf5.csv"
     }
 }
