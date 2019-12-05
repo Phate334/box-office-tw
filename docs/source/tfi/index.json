@@ -444,5 +444,9 @@
     "20191118-20191124": {
         "pdf": "https://www.tfi.org.tw/Content/TFI/PublicInfo/全國電影票房2019年1118-1124統計資訊.pdf",
         "xlsx": "https://www.tfi.org.tw/Content/TFI/PublicInfo/全國電影票房2019年1118-1124統計資訊.xlsx"
+    },
+    "20191125-20191201": {
+        "pdf": "https://www.tfi.org.tw/Content/TFI/PublicInfo/全國電影票房2019年1125-1201統計資訊.pdf",
+        "xlsx": "https://www.tfi.org.tw/Content/TFI/PublicInfo/全國電影票房2019年1125-1201統計資訊.xlsx"
     }
 }
