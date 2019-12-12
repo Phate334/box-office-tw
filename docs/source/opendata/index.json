@@ -208,5 +208,8 @@
     },
     "20191125-20191201": {
         "csv": "https://opendata.culture.tw/upload/dataSource/2019-12-05/df35b02d-8961-4c69-bfd7-60288722e715/17065e405f61f28f125c4f6c508a5c4e.csv"
+    },
+    "20191202-20191208": {
+        "csv": "https://opendata.culture.tw/upload/dataSource/2019-12-12/a4352cd1-a3ce-4e62-a177-0ce663fc0524/205163127f3ce57919022f20cf16e392.csv"
     }
 }
