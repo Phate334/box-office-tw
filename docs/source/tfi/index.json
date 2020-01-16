@@ -468,5 +468,9 @@
     "20191230-20200105": {
         "pdf": "https://www.tfi.org.tw/Content/TFI/PublicInfo/全國電影票房2019年1230-2020年0105統計資訊.pdf",
         "xlsx": "https://www.tfi.org.tw/Content/TFI/PublicInfo/全國電影票房2019年1230-2020年0105統計資訊.xlsx"
+    },
+    "20200106-20200112": {
+        "pdf": "https://www.tfi.org.tw/Content/TFI/PublicInfo/全國電影票房2020年0106-0112統計資訊.pdf",
+        "xlsx": "https://www.tfi.org.tw/Content/TFI/PublicInfo/全國電影票房2020年0106-0112統計資訊.xlsx"
     }
 }
