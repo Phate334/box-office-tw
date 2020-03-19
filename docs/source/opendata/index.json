@@ -247,5 +247,11 @@
     },
     "20200224-20200301": {
         "csv": "https://opendata.culture.tw/upload/dataSource/2020-03-05/aa2730e9-56b9-4995-8bc5-cf02e992b982/af739a5f5686f6e31d9bb2dd3d8066ed.csv"
+    },
+    "20200302-20200308": {
+        "csv": "https://opendata.culture.tw/upload/dataSource/2020-03-12/d1d814da-5e83-4191-ad00-a394ed3ef9c9/d3fc3f46b1f96bc1a447742b54e57413.csv"
+    },
+    "20200309-20200315": {
+        "csv": "https://opendata.culture.tw/upload/dataSource/2020-03-19/8e4e416b-2c9a-4318-a202-23850efd7368/bcac243b0bff33dc47541e00b443401b.csv"
     }
 }
