@@ -271,5 +271,8 @@
     },
     "20200420-20200426": {
         "csv": "https://opendata.culture.tw/upload/dataSource/2020-04-30/3ddeaab2-d771-4722-84bc-e37dc01d75f1/4801a39681187a4bce983edde78531a4.csv"
+    },
+    "20200427-20200503": {
+        "csv": "https://opendata.culture.tw/upload/dataSource/2020-05-07/76f7fe8f-0de1-4dc2-859b-97b1374a740d/1b7168416474b15b4613ac00bd91bfcf.csv"
     }
 }
