@@ -541,5 +541,9 @@
     "20200504-20200510": {
         "pdf": "https://www.tfi.org.tw/Content/TFI/PublicInfo/全國電影票房2020年0504-0510統計資訊.pdf",
         "xlsx": "https://www.tfi.org.tw/Content/TFI/PublicInfo/全國電影票房2020年0504-0510統計資訊.xlsx"
+    },
+    "20200511-20200517": {
+        "pdf": "https://www.tfi.org.tw/Content/TFI/PublicInfo/全國電影票房2020年0511-0517統計資訊.pdf",
+        "xlsx": "https://www.tfi.org.tw/Content/TFI/PublicInfo/全國電影票房2020年0511-0517統計資訊.xlsx"
     }
 }
